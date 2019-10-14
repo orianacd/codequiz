@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <!---header-->
+    <h1>Check Your Stage Craft Knowledge!</h1>
+    <!---button to view highscores-->
+    <button>Highscore!</button>
+    <!---timer-->
+
+    <!---content-->
+    <div>A quick quiz to test your theatre tech basics</div>
+    <!---button to start quiz-->
+    <button>Enter Stage Door</button>
+
+    <!--- game div-->
+    <div id="question">
+      Q1: Which of the following is a kind of lighting fixture:
+    </div>
+    <ol>
+      <li id="choices">Fresnel</li>
+      <li id="choices">Flamel</li>
+      <li id="choices">Flannel</li>
+      <li id="choices">Freshener</li>
+    </ol>
+    <div id="question">Q2: What is a "lamp"?</div>
+    <ol>
+      <li id="choices">Set dressing</li>
+      <li id="choices">The glass bulb inside a light</li>
+      <li id="choices">
+        An outdated acronym regarding sandwiches (lettuce and mayo, please
+      </li>
+      <li id="choices">The home of a genie</li>
+    </ol>
+    <div id="question">
+      Q3: What basic colors of LED's do you want to mix to make an amber light?
+    </div>
+    <ol>
+      <li id="choices">Orange and White</li>
+      <li id="choices">Blue and Green</li>
+      <li id="choices">Red and Green</li>
+      <li id="choices">UV and Orange</li>
+    </ol>
+    <div id="question">Q4:</div>
+    <!---replace with question and choice-->
+
+    <!---highscore dive -->
+  </body>
+</html>
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Quiz</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="header" class="header">
+        <div id="highScores">High Scores</div>
+        <div id="timer">Timer</div>
+      </div>
+      <div id="start" class="start">Start Quiz!</div>
+
+      <div id="quiz" style="display: none">
+        <div id="question" class="question"></div>
+        <div id="choices">
+          <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+          <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+          <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+          <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+        </div>
+      </div>
+      <div id="finalScore" style="display: none">
+        <!-- show final score -->
+        <div class="score">Final Score</div>
+        <div class="score" id="yourScore"></div>
+        <!-- form to submit score -->
+        <form class="score">
+          <input placeholder="Your Name" id="name" />
+          <button id="add-btn">Submit Score</button>
+        </form>
+      </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+
+/* vars*/ /*array of questions (question - string, choices - array, answer -
+string, key-(id, number--need to id in local storage)) /*score*/ /*timer*/
+/*helper functions*/ /*events*/ /* click highscore link*/ /*find object in local
+storage*/ /* parse object for screen*/ /* display parsed object in HTML*/ //
+/*clear highscores*/ /*go back*/ /*start quiz*/ /* /*choose answer*/ /* enter
+initials and submit score, go to highscore event*/ /*init*/ /*none*/ /*var
+questionDiv = document.getElementById("question"); var choicesDiv =
+document.getElementById("choices"); var questionBtn =
+document.getElementById("questionBtn"); var startQuestion = 0; function
+renderQuestion(index) { return questions[index].title; } /* takes in index, uses
+this index to return the choices from the db */ /*function renderChoices(index)
+{ choicesDiv.innerHTML = ""; for (i = 0; i < questions[index].choices.length;
+i++) { var choiceBtn = document.createElement("button"); choiceBtn.textContent =
+questions[index].choices[i]; choicesDiv.appendChild(choiceBtn); } } /* events */
+/*questionBtn.addEventListener("click", function() { startQuestion++; /* call
+redner question */ /* questionDiv.innerHTML = renderQuestion(startQuestion);
+renderChoices(startQuestion); }); questionDiv.innerHTML =
+renderQuestion(startQuestion); renderChoices(0);*/ var start =
+document.getElementById("start"); var quiz = document.getElementById("quiz");
+var question = document.getElementById("question"); var choiceA =
+document.getElementById("A"); var choiceB = document.getElementById("B"); var
+choiceC = document.getElementById("C"); var choiceD =
+document.getElementById("D"); var finalScore =
+document.getElementById("finalScore"); var yourScore =
+document.getElementById("yourScore"); var addBtn =
+document.getElementById("add-btn"); var nameImput =
+document.getElementById("name"); var finalQuestion = questions.length - 1; var
+currentQuestion = 0; var score = 0; // show a question function showQuestion() {
+var q = questions[currentQuestion]; //making the index set at 0 will need loop
+question.innerHTML = "
+<p>" + q.question + "</p>
+"; choiceA.innerHTML = q.choiceA; choiceB.innerHTML = q.choiceB;
+choiceC.innerHTML = q.choiceC; choiceD.textContent = q.choiceD; } function
+startQuiz() { // hide start button start.style.display = "none"; // show
+questions showQuestion(); //change display from none to visible
+quiz.style.display = "block"; // start timeer } function showScore() { // hide
+qiuz quiz.style.display = "none"; finalScore.style.display = "block"; // show
+score yourScore.textContent = score; } function storeScore(event) {
+event.preventDefault(); var user = { name: nameImput.value, savedScore: score };
+localStorage.setItem("storage", score /*JSON.stingify(user)*/); } // make score
+and check anser function checkAnswer(answer) { if (answer ===
+questions[currentQuestion].correct) { score++; } else { } if (currentQuestion <
+finalQuestion) { currentQuestion++; showQuestion(); } else { showScore();
+console.log(score); } } // see score page and subit
+start.addEventListener("click", startQuiz); addBtn.addEventListener("click",
+storeScore);
+
+<!---header-->
+<!---<h1>Check Your Stage Craft Knowledge!</h1>--->
+<!---button to view highscores-->
+<!--- <button>Highscore!</button> -->
+<!---timer-->
+
+<!---
+    <div>A quick quiz to test your theatre tech basics</div>
+
+    <button>Enter Stage Door</button> --->
