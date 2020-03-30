@@ -102,7 +102,7 @@ body {
     position: absolute;
     left: 300px;
     top: 50px;
-    color: lightgrey;
+    color: black;
   }
   .start:hover {
     border: 3px solid rgb(107, 6, 99);
