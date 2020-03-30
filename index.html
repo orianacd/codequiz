@@ -1,33 +1,50 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Quiz</title>
-  </head>
-  <body>
-    <!---header-->
-    <h1>Check Your Stage Craft Knowledge!</h1>
-    <!---button to view highscores-->
-    <!--- <button>Highscore!</button> -->
-    <!---timer-->
 
-    <!---
-    <div>A quick quiz to test your theatre tech basics</div>
+<head>
+  <meta charset="UTF-8" />
 
-    <button>Enter Stage Door</button> --->
+  <title>Technical Theatre Quiz</title>
 
-    <!--- game div-->
-    <div id="question">replace this with DB</div>
-    <div id="choices">replace this with DB choices</div>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <button id="questionBtn">Next Question</button>
+<body>
+  <div id="container">
+    <div id="header" class="header">
+      <div id="highScoresBtn" class="highScoresBtn">High Scores</div>
+      <div id="timer">Timer</div>
+    </div>
+    <div id="start" class="start">Start Quiz!</div>
 
-    <!---replace with question and choice-->
+    <div id="quiz" style="display: none">
+      <div id="question" class="question"></div>
+      <div id="choices">
+        <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+        <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+        <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+        <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+      </div>
+    </div>
+    <div id="finalScore" style="display: none">
+      <!-- show final score -->
+      <div class="score">Final Score</div>
+      <div class="score" id="yourScore"></div>
+      <!-- form to submit score -->
+      <form class="score">
+        <input placeholder="Your Name" id="name" />
+        <button id="add-btn">Submit Score</button>
+      </form>
+    </div>
+    <div id="highScores" class="highScores" style="display: none">
+      <div class="highScoresTitle">High Scores</div>
+      <div id="nameAndScore" class="nameAndScore"></div>
+    </div>
+    <div id="homeBtn" class="homeBtn" style="display: none">Home</div>
+  </div>
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
 
-    <!---highscore dive -->
-    <script src="./questions.js"></script>
-    <script src="./app.js"></script>
-  </body>
 </html>

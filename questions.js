@@ -10,74 +10,64 @@ var questions = [
 
   {
     question: "What is a 'lamp'?",
-    : [
-  "Set dressing",
-  "The glass bulb inside a light",
-  "An outdated acronym regarding sandwiches",
-  "The home of a genie"
-],
-  correct: "B"
+    choiceA: "Set dressing",
+    choiceB: "The glass bulb inside a light",
+    choiceC: "An outdated acronym regarding sandwiches",
+    choiceD: "The home of a genie",
+    correct: "B"
   },
 
-{
-  question:
-  "What basic colors of LED's do you want to mix to make an amber light?",
-    : [
-    "Orange and White",
-    "Blue and Green",
-    "Red and Green",
-    "UV and Orange"
-  ],
+  {
+    question: "What primary colors of light do you want to mix to make amber?",
+    choiceA: "Orange and White",
+    choiceB: "Blue and Green",
+    choiceC: "Red and Green",
+    choiceD: "UV and Orange",
     correct: "C"
-},
+  },
 
-{
-  question: "When sitting in the audience stage left is where?",
-    : [
-    "To your right",
-    "To your left",
-    "Behind the curtains",
-    "The stage has left the building"
-  ],
+  {
+    question: "When sitting in the audience stage left is where?",
+    choiceA: "To your right",
+    choiceB: "To your left",
+    choiceC: "Behind the curtains",
+    choiceD: "The stage has left the building",
     correct: "A"
-},
+  },
 
-{
-  question: "They call it downstage because:",
-    : [
-    "Stage direction terms were based off raked stages",
-    "Look down, there it is",
-    "Direction in a 3D universie is relative",
-    "It's where the sad actors go"
-  ],
+  {
+    question: "They call it downstage because:",
+    choiceA: "Stage direction terms were based off raked stages",
+    choiceB: "Look down, there it is",
+    choiceC: "Direction in a 3D universie is relative",
+    choiceD: "It's where the sad actors go",
     correct: "A"
-},
+  },
 
-{
-  question: "Where are you least likely to find an actor:",
-    : [
-    "Dressing room",
-    "Bathroom",
-    "Their light",
-    "Touching props that aren't theirs"
-  ],
+  {
+    question: "Where are you least likely to find an actor:",
+    choiceA: "Dressing room",
+    choiceB: "Bathroom",
+    choiceC: "Their light",
+    choiceD: "Touching props that aren't theirs",
     correct: "C"
-},
+  },
 
-{
-  question: "Which of these are sound cables:",
-    : ["XRT", "XTC", "XLR", "XCL"],
+  {
+    question: "Which of these is an audio cable:",
+    choiceA: "XRT",
+    choiceB: "XTC",
+    choiceC: "XLR",
+    choiceD: "XCL",
     correct: "B"
-},
+  },
 
-{
-  title: "Why isn't the sound working?",
-    : [
-    "The board is off",
-    "The cables are not properly plugged in",
-    "God has abandoned us",
-    "A and B"
-  ],
+  {
+    question: "Why isn't the sound working?",
+    choiceA: "The board is off",
+    choiceB: "The cables are not properly plugged in",
+    choiceC: "God has abandoned us",
+    choiceD: "A and B",
     correct: "D"
-}
+  }
 ];
