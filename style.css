@@ -21,8 +21,8 @@ body {
     padding: 10px;
   }
   .choice {
-    display: inline-block;
-    width: 50px;
+    display: inline-block-justify;
+    width: 60x;
     text-align: center;
     border: 1px solid grey;
     border-radius: 5px;
