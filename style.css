@@ -5,7 +5,7 @@ body {
   
   #container {
     margin: 20px auto;
-    background-color: white;
+    background-color:rgb(192, 218, 228);
     height: 300px;
     width: 700px;
     border-radius: 5px;
@@ -15,9 +15,9 @@ body {
   
   #choices {
     width: 480px;
-    position: absolute;
+    position: center;
     right: 0;
-    top: 125px;
+    top: 80px;
     padding: 10px;
   }
   .choice {
