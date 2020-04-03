@@ -21,7 +21,7 @@ body {
     padding: 10px;
   }
   .choice {
-    display: inline-block-justify;
+    display: inline-block-center;
     width: 60x;
     text-align: center;
     border: 1px solid grey;
